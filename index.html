@@ -28,7 +28,6 @@
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database-compat.js"></script>
 
     <script>
-      
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -62,11 +61,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebGL.loader.js";
+      var loaderUrl = buildUrl + "/UnityFirebaseWebGL.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WebGL.data.gz",
-        frameworkUrl: buildUrl + "/WebGL.framework.js.gz",
-        codeUrl: buildUrl + "/WebGL.wasm.gz",
+        dataUrl: buildUrl + "/UnityFirebaseWebGL.data",
+        frameworkUrl: buildUrl + "/UnityFirebaseWebGL.framework.js",
+        codeUrl: buildUrl + "/UnityFirebaseWebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "TilTak_Firebase",
@@ -120,9 +119,10 @@
                 alert(message);
               });
             };
+
       document.body.appendChild(script);
 
-      // Your web app's Firebase configuration
+            // Your web app's Firebase configuration
       const firebaseApp = firebase.initializeApp({
         apiKey: "AIzaSyAYaYCLFlkBPtCrP9p5urTk7Hpbk8a3iQo",
         authDomain: "unity-firebase-229e8.firebaseapp.com",
@@ -135,6 +135,7 @@
 
       // Initialize Firebase
       const database  = firebaseApp.database();
+
     </script>
   </body>
 </html>
